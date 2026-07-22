@@ -2,15 +2,17 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
+"Language: id\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: SPMB Pro 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/spmb-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Indonesian <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-07-22T01:25:32+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-07-22 00:00+0000\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: spmb-pro\n"
 
@@ -19,27 +21,22 @@ msgstr ""
 #: includes/admin/class-spmb-admin-menu.php:27
 #: includes/admin/class-spmb-admin-menu.php:28
 msgid "SPMB Pro"
-msgstr ""
 
 #. Plugin URI of the plugin
 #: spmb-pro.php
 msgid "https://wpsekolah.id/plugins/spmb-pro"
-msgstr ""
 
 #. Description of the plugin
 #: spmb-pro.php
 msgid "Sistem Penerimaan Murid Baru untuk sekolah WordPress. Kelola jalur zonasi, afirmasi, prestasi, dan perpindahan dengan kuota, seleksi, dan pengumuman."
-msgstr ""
 
 #. Author of the plugin
 #: spmb-pro.php
 msgid "WP Sekolah"
-msgstr ""
 
 #. Author URI of the plugin
 #: spmb-pro.php
 msgid "https://wpsekolah.id"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-applicant-detail.php:17
 #: includes/admin/class-spmb-admin-applicants.php:17
@@ -48,29 +45,23 @@ msgstr ""
 #: includes/admin/class-spmb-admin-selection.php:17
 #: includes/admin/class-spmb-admin-settings.php:17
 msgid "Anda tidak punya akses ke halaman ini."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-applicant-detail.php:25
 #: includes/export/class-spmb-export-handler.php:55
 msgid "Pendaftar tidak ditemukan."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-applicant-detail.php:53
 msgid "Status diperbarui."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-applicant-detail.php:58
 msgid "Status dokumen diperbarui."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-applicant-detail.php:62
 msgid "Pembayaran ditandai lunas."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-applicant-detail.php:68
 #: includes/admin/class-spmb-admin-payment-verify.php:46
 msgid "Pembayaran terverifikasi."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:29
 #: includes/admin/class-spmb-admin-list-table.php:30
@@ -79,7 +70,6 @@ msgstr ""
 #: views/admin/applicants-list.php:24
 #: views/admin/payment-verify.php:33
 msgid "Pendaftar"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:44
 #: includes/export/class-spmb-export-csv.php:46
@@ -87,7 +77,6 @@ msgstr ""
 #: views/admin/applicant-detail.php:19
 #: views/public/tracking.php:52
 msgid "No. Pendaftaran"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:45
 #: includes/export/class-spmb-export-csv.php:47
@@ -95,7 +84,6 @@ msgstr ""
 #: includes/export/class-spmb-report-pdf.php:62
 #: views/admin/applicant-detail.php:20
 msgid "Nama"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:46
 #: includes/export/class-spmb-export-csv.php:48
@@ -106,7 +94,6 @@ msgstr ""
 #: views/public/form.php:97
 #: views/public/tracking.php:53
 msgid "Jenjang"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:47
 #: includes/export/class-spmb-export-csv.php:49
@@ -117,7 +104,6 @@ msgstr ""
 #: views/public/announcement.php:52
 #: views/public/tracking.php:54
 msgid "Jalur"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:48
 #: includes/export/class-spmb-export-csv.php:51
@@ -126,201 +112,161 @@ msgstr ""
 #: views/admin/applicant-detail.php:114
 #: views/admin/payment-verify.php:35
 msgid "Status"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:49
 #: views/admin/applicant-detail.php:108
 msgid "Pembayaran"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:50
 msgid "Tanggal"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:73
 #: views/admin/applicant-detail.php:125
 #: views/admin/payment-verify.php:63
 msgid "Verifikasi"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:74
 msgid "Tolak"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-list-table.php:112
 #: views/admin/applicant-detail.php:91
 msgid "Lihat"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-menu.php:38
 #: includes/admin/class-spmb-admin-menu.php:39
 msgid "Dashboard"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-menu.php:57
 #: includes/admin/class-spmb-admin-menu.php:58
 #: views/admin/applicant-detail.php:48
 msgid "Detail Pendaftar"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-menu.php:66
 #: includes/admin/class-spmb-admin-menu.php:67
 #: views/admin/payment-verify.php:16
 msgid "Verifikasi Pembayaran"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-menu.php:75
 #: includes/admin/class-spmb-admin-menu.php:76
 #: views/admin/selection.php:27
 msgid "Pengumuman & Seleksi"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-menu.php:84
 #: includes/admin/class-spmb-admin-menu.php:85
 #: views/admin/dashboard.php:35
 msgid "Pengaturan"
-msgstr ""
 
 #: includes/admin/class-spmb-admin-payment-verify.php:44
 msgid "Ditandai lunas."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-payment-verify.php:48
 msgid "Invoice dibatalkan."
-msgstr ""
 
 #. translators: 1: jumlah diterima, 2: jumlah cadangan
 #: includes/admin/class-spmb-admin-selection.php:51
 #, php-format
 msgid "Seleksi dijalankan. Diterima: %1$d, Cadangan: %2$d."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-selection.php:57
 msgid "Pengumuman dipublikasikan."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-selection.php:60
 msgid "Pengumuman ditarik kembali."
-msgstr ""
 
 #: includes/admin/class-spmb-admin-settings.php:40
 msgid "Pengaturan disimpan."
-msgstr ""
 
 #: includes/export/class-spmb-export-csv.php:50
 #: includes/export/class-spmb-kartu-pdf.php:77
 #: includes/export/class-spmb-report-pdf.php:65
 #: views/public/announcement.php:54
 msgid "Program"
-msgstr ""
 
 #: includes/export/class-spmb-export-csv.php:52
 #: views/admin/applicant-detail.php:43
 msgid "Status Seleksi"
-msgstr ""
 
 #: includes/export/class-spmb-export-csv.php:53
 #: includes/export/class-spmb-report-pdf.php:68
 #: views/admin/applicant-detail.php:44
 #: views/public/announcement.php:57
 msgid "Peringkat"
-msgstr ""
 
 #: includes/export/class-spmb-export-csv.php:54
 #: views/admin/applicant-detail.php:39
 msgid "Jarak (km)"
-msgstr ""
 
 #: includes/export/class-spmb-export-csv.php:55
 #: views/admin/settings-jenjang.php:61
 #: views/public/form.php:162
 msgid "Rapor"
-msgstr ""
 
 #: includes/export/class-spmb-export-handler.php:25
 #: includes/rest/class-spmb-rest-permissions.php:30
 msgid "Anda tidak punya akses."
-msgstr ""
 
 #: includes/export/class-spmb-export-handler.php:43
 msgid "Tipe ekspor tidak valid."
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:57
 msgid "KARTU PENDAFTAR"
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:74
 #: views/admin/applicant-detail.php:21
 #: views/public/form.php:53
 msgid "NISN"
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:78
 #: views/admin/applicant-detail.php:24
 #: views/public/form.php:64
 msgid "Tempat Lahir"
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:79
 #: views/admin/applicant-detail.php:25
 #: views/public/form.php:65
 msgid "Tanggal Lahir"
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:80
 #: views/admin/applicant-detail.php:28
 msgid "No. HP"
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:105
 #: views/admin/applicant-detail.php:112
 #: views/admin/payment-verify.php:32
 #: views/public/tracking.php:58
 msgid "No. Invoice"
-msgstr ""
 
 #: includes/export/class-spmb-kartu-pdf.php:111
 msgid "Biaya"
-msgstr ""
 
 #: includes/export/class-spmb-report-pdf.php:61
 msgid "No"
-msgstr ""
 
 #: includes/export/class-spmb-report-pdf.php:63
 msgid "No. Daftar"
-msgstr ""
 
 #: includes/export/class-spmb-report-pdf.php:66
 msgid "Skor"
-msgstr ""
 
 #: includes/form/class-spmb-form-handler.php:25
 msgid "Sesi tidak valid. Muat ulang halaman."
-msgstr ""
 
 #: includes/form/class-spmb-form-handler.php:29
 msgid "Terjadi kesalahan validasi."
-msgstr ""
 
 #: includes/form/class-spmb-form-handler.php:41
 msgid "Gagal menyimpan pendaftaran. Coba lagi."
-msgstr ""
 
 #: includes/form/class-spmb-form-handler.php:169
 msgid "Pendaftaran SPMB Diterima"
-msgstr ""
 
 #. translators: %s: nomor pendaftaran
 #: includes/form/class-spmb-form-handler.php:172
 #, php-format
 msgid "Pendaftaran Anda diterima. Nomor pendaftaran: %s"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:30
 msgid "Pendaftaran belum dibuka. Hubungi sekolah."
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:51
 #: views/admin/selection.php:19
@@ -328,7 +274,6 @@ msgstr ""
 #: views/admin/settings-quota.php:13
 #: views/admin/settings.php:50
 msgid "Zonasi"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:52
 #: views/admin/selection.php:20
@@ -336,7 +281,6 @@ msgstr ""
 #: views/admin/settings-quota.php:14
 #: views/admin/settings.php:51
 msgid "Afirmasi"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:53
 #: views/admin/selection.php:21
@@ -345,7 +289,6 @@ msgstr ""
 #: views/admin/settings-quota.php:15
 #: views/admin/settings.php:52
 msgid "Prestasi"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:54
 #: views/admin/selection.php:22
@@ -353,569 +296,434 @@ msgstr ""
 #: views/admin/settings-quota.php:16
 #: views/admin/settings.php:53
 msgid "Perpindahan Tugas"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:77
 msgid "Islam"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:78
 msgid "Kristen"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:79
 msgid "Katolik"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:80
 msgid "Hindu"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:81
 msgid "Buddha"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:82
 msgid "Konghucu"
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:97
 msgid "Pendaftaran berhasil."
-msgstr ""
 
 #: includes/form/class-spmb-form-shortcode.php:100
 msgid "Terdapat kesalahan pada isian. Periksa kembali."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:40
 msgid "Field wajib diisi."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:53
 msgid "NIK harus 16 digit angka."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:56
 msgid "NISN harus 10 digit angka."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:59
 msgid "Format email tidak valid."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:64
 msgid "Format tanggal lahir tidak valid."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:78
 msgid "Jenjang tidak aktif."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:82
 msgid "Jalur tidak valid."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:85
 msgid "Jalur tidak aktif."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:101
 msgid "Rata-rata rapor harus antara 0 dan 100."
-msgstr ""
 
 #: includes/form/class-spmb-form-validator.php:106
 msgid "Kategori afirmasi wajib diisi."
-msgstr ""
 
 #: includes/form/class-spmb-uploader.php:36
 msgid "Gagal mengunggah berkas."
-msgstr ""
 
 #: includes/form/class-spmb-uploader.php:57
 msgid "Tipe berkas tidak diizinkan."
-msgstr ""
 
 #: includes/form/class-spmb-uploader.php:60
 msgid "Ukuran berkas melebihi batas."
-msgstr ""
 
 #: includes/rest/class-spmb-rest-admin.php:134
 msgid "Status tidak valid."
-msgstr ""
 
 #: includes/rest/class-spmb-rest-admin.php:152
 msgid "Tagihan tidak ditemukan."
-msgstr ""
 
 #: includes/rest/class-spmb-rest-distance.php:43
 msgid "Koordinat sekolah belum diatur."
-msgstr ""
 
 #: includes/rest/class-spmb-rest-distance.php:50
 msgid "Koordinat tidak valid."
-msgstr ""
 
 #: includes/rest/class-spmb-rest-lookup.php:40
 #: views/public/announcement.php:41
 #: views/public/tracking.php:42
 msgid "Nomor pendaftaran tidak ditemukan."
-msgstr ""
 
 #: views/admin/applicant-detail.php:22
 #: views/public/form.php:54
 msgid "NIK"
-msgstr ""
 
 #: views/admin/applicant-detail.php:23
 #: views/public/form.php:56
 msgid "Jenis Kelamin"
-msgstr ""
 
 #: views/admin/applicant-detail.php:26
 #: views/public/form.php:67
 msgid "Agama"
-msgstr ""
 
 #: views/admin/applicant-detail.php:27
 #: views/public/form.php:75
 msgid "Alamat"
-msgstr ""
 
 #: views/admin/applicant-detail.php:29
 #: views/public/form.php:77
 msgid "Email"
-msgstr ""
 
 #: views/admin/applicant-detail.php:30
 #: views/public/form.php:89
 #: views/public/form.php:90
 msgid "Asal Sekolah"
-msgstr ""
 
 #: views/admin/applicant-detail.php:31
 msgid "Nama Orang Tua"
-msgstr ""
 
 #: views/admin/applicant-detail.php:32
 msgid "No. HP Orang Tua"
-msgstr ""
 
 #: views/admin/applicant-detail.php:33
 msgid "Pekerjaan Orang Tua"
-msgstr ""
 
 #: views/admin/applicant-detail.php:34
 msgid "Penghasilan"
-msgstr ""
 
 #: views/admin/applicant-detail.php:37
 #: views/public/form.php:123
 msgid "Pilihan Program 1"
-msgstr ""
 
 #: views/admin/applicant-detail.php:38
 #: views/public/form.php:124
 msgid "Pilihan Program 2"
-msgstr ""
 
 #: views/admin/applicant-detail.php:40
 msgid "Rata-rata Rapor"
-msgstr ""
 
 #: views/admin/applicant-detail.php:41
 #: views/public/form.php:135
 msgid "Poin Prestasi"
-msgstr ""
 
 #: views/admin/applicant-detail.php:42
 #: views/admin/settings-jenjang.php:52
 #: views/public/form.php:141
 msgid "Kategori Afirmasi"
-msgstr ""
 
 #: views/admin/applicant-detail.php:49
 msgid "Kembali"
-msgstr ""
 
 #: views/admin/applicant-detail.php:50
 msgid "Unduh Kartu PDF"
-msgstr ""
 
 #: views/admin/applicant-detail.php:59
 msgid "Biodata"
-msgstr ""
 
 #: views/admin/applicant-detail.php:69
 msgid "Status Pendaftar"
-msgstr ""
 
 #: views/admin/applicant-detail.php:78
 msgid "Simpan Status"
-msgstr ""
 
 #: views/admin/applicant-detail.php:83
 #: views/admin/settings.php:20
 #: views/public/form.php:153
 msgid "Dokumen"
-msgstr ""
 
 #: views/admin/applicant-detail.php:85
 msgid "Tidak ada dokumen."
-msgstr ""
 
 #: views/admin/applicant-detail.php:98
 #: views/admin/dashboard.php:22
 #: views/admin/payment-verify.php:26
 #: views/public/tracking.php:15
 msgid "Terverifikasi"
-msgstr ""
 
 #: views/admin/applicant-detail.php:110
 msgid "Tidak ada tagihan."
-msgstr ""
 
 #: views/admin/applicant-detail.php:113
 #: views/admin/payment-verify.php:34
 #: views/public/tracking.php:59
 msgid "Jumlah"
-msgstr ""
 
 #: views/admin/applicant-detail.php:119
 msgid "Tandai Lunas"
-msgstr ""
 
 #: views/admin/applicants-list.php:33
 msgid "Semua Jenjang"
-msgstr ""
 
 #: views/admin/applicants-list.php:39
 msgid "Semua Jalur"
-msgstr ""
 
 #: views/admin/applicants-list.php:45
 msgid "Semua Status"
-msgstr ""
 
 #: views/admin/applicants-list.php:50
 msgid "Cari nama / no. pendaftaran"
-msgstr ""
 
 #: views/admin/applicants-list.php:51
 msgid "Filter"
-msgstr ""
 
 #: views/admin/applicants-list.php:54
 msgid "Cari"
-msgstr ""
 
 #: views/admin/dashboard.php:13
 msgid "Dashboard SPMB Pro"
-msgstr ""
 
 #: views/admin/dashboard.php:18
 msgid "Total Pendaftar"
-msgstr ""
 
 #: views/admin/dashboard.php:26
 msgid "Pembayaran Lunas"
-msgstr ""
 
 #: views/admin/dashboard.php:32
 msgid "Lihat Pendaftar"
-msgstr ""
 
 #: views/admin/payment-verify.php:23
 msgid "Semua"
-msgstr ""
 
 #: views/admin/payment-verify.php:24
 msgid "Belum Bayar"
-msgstr ""
 
 #: views/admin/payment-verify.php:25
 msgid "Sudah Bayar"
-msgstr ""
 
 #: views/admin/payment-verify.php:36
 msgid "Aksi"
-msgstr ""
 
 #: views/admin/payment-verify.php:41
 msgid "Tidak ada data."
-msgstr ""
 
 #: views/admin/payment-verify.php:60
 msgid "Lunas"
-msgstr ""
 
 #: views/admin/payment-verify.php:66
 msgid "Batal"
-msgstr ""
 
 #: views/admin/selection.php:44
 msgid "Status Pengumuman:"
-msgstr ""
 
 #: views/admin/selection.php:45
 msgid "Dipublikasikan"
-msgstr ""
 
 #: views/admin/selection.php:45
 msgid "Belum dipublikasikan"
-msgstr ""
 
 #: views/admin/selection.php:52
 msgid "Tarik Pengumuman"
-msgstr ""
 
 #: views/admin/selection.php:55
 #: views/admin/settings-general.php:21
 msgid "Publikasikan Pengumuman"
-msgstr ""
 
 #: views/admin/selection.php:60
 msgid "Ringkasan Eligible & Kuota"
-msgstr ""
 
 #: views/admin/selection.php:65
 msgid "Pendaftar Eligible"
-msgstr ""
 
 #: views/admin/selection.php:66
 #: views/admin/settings.php:17
 msgid "Kuota"
-msgstr ""
 
 #: views/admin/selection.php:71
 msgid "Pilih jenjang."
-msgstr ""
 
 #: views/admin/selection.php:85
 msgid "Total Eligible"
-msgstr ""
 
 #: views/admin/selection.php:97
 msgid "Jalankan Seleksi"
-msgstr ""
 
 #: views/admin/selection.php:101
 msgid "Ekspor CSV"
-msgstr ""
 
 #: views/admin/selection.php:104
 msgid "Ekspor Laporan PDF"
-msgstr ""
 
 #: views/admin/selection.php:109
 msgid "Riwayat Seleksi"
-msgstr ""
 
 #: views/admin/selection.php:113
 msgid "Waktu"
-msgstr ""
 
 #: views/admin/selection.php:115
 msgid "Diterima"
-msgstr ""
 
 #: views/admin/selection.php:116
 msgid "Cadangan"
-msgstr ""
 
 #: views/admin/selection.php:121
 msgid "Belum ada riwayat."
-msgstr ""
 
 #: views/admin/settings-document.php:19
 msgid "Tipe Berkas Diizinkan"
-msgstr ""
 
 #: views/admin/settings-document.php:32
 msgid "Ukuran Maksimum (byte)"
-msgstr ""
 
 #. translators: %s: byte
 #: views/admin/settings-document.php:35
 #, php-format
 msgid "Default %s byte (2 MB)."
-msgstr ""
 
 #: views/admin/settings-fee.php:13
 msgid "Biaya Pendaftaran (Rp)"
-msgstr ""
 
 #: views/admin/settings-fee.php:17
 msgid "Tanggal Buka Pendaftaran"
-msgstr ""
 
 #: views/admin/settings-fee.php:21
 msgid "Tanggal Tutup Pendaftaran"
-msgstr ""
 
 #: views/admin/settings-general.php:13
 msgid "Nama Sekolah"
-msgstr ""
 
 #: views/admin/settings-general.php:17
 msgid "Alamat Sekolah"
-msgstr ""
 
 #: views/admin/settings-general.php:25
 msgid "Tampilkan hasil seleksi di halaman publik pengumuman."
-msgstr ""
 
 #: views/admin/settings-general.php:30
 msgid "Hapus File saat Uninstall"
-msgstr ""
 
 #: views/admin/settings-general.php:34
 msgid "Hapus berkas pendaftar di folder uploads saat plugin dihapus."
-msgstr ""
 
 #: views/admin/settings-jenjang.php:14
 msgid "SD / MI"
-msgstr ""
 
 #: views/admin/settings-jenjang.php:15
 msgid "SMP / MTs"
-msgstr ""
 
 #: views/admin/settings-jenjang.php:16
 msgid "SMA / SMK / MA"
-msgstr ""
 
 #: views/admin/settings-jenjang.php:26
 msgid "Jenjang Aktif"
-msgstr ""
 
 #: views/admin/settings-jenjang.php:39
 msgid "Jalur Seleksi Aktif"
-msgstr ""
 
 #: views/admin/settings-jenjang.php:55
 msgid "Pisahkan dengan koma. Contoh: ekonomi, diffabel, lainnya."
-msgstr ""
 
 #: views/admin/settings-jenjang.php:59
 msgid "Bobot Prestasi"
-msgstr ""
 
 #: views/admin/settings-program.php:13
 msgid "Daftar Program / Jurusan"
-msgstr ""
 
 #: views/admin/settings-program.php:16
 msgid "Belum ada jenjang aktif."
-msgstr ""
 
 #: views/admin/settings-program.php:18
 msgid "Format: kode=nilai. Pisahkan beberapa dengan koma. Contoh: IPA=IPA, IPS=IPS."
-msgstr ""
 
 #: views/admin/settings-quota.php:20
 msgid "Kuota Per Jalur"
-msgstr ""
 
 #: views/admin/settings-quota.php:23
 msgid "Belum ada jenjang aktif. Aktifkan jenjang terlebih dahulu."
-msgstr ""
 
 #: views/admin/settings-zonasi.php:13
 msgid "Latitude Sekolah"
-msgstr ""
 
 #: views/admin/settings-zonasi.php:17
 msgid "Longitude Sekolah"
-msgstr ""
 
 #: views/admin/settings-zonasi.php:21
 msgid "Catatan Zonasi"
-msgstr ""
 
 #: views/admin/settings-zonasi.php:22
 msgid "Koordinat ini dipakai menghitung jarak rumah calon siswa ke sekolah untuk ranking jalur zonasi."
-msgstr ""
 
 #: views/admin/settings.php:15
 msgid "Umum"
-msgstr ""
 
 #: views/admin/settings.php:16
 msgid "Jenjang & Jalur"
-msgstr ""
 
 #: views/admin/settings.php:18
 msgid "Program / Jurusan"
-msgstr ""
 
 #: views/admin/settings.php:19
 msgid "Biaya & Tanggal"
-msgstr ""
 
 #: views/admin/settings.php:21
 msgid "Zonasi Koordinat"
-msgstr ""
 
 #: views/admin/settings.php:27
 msgid "Pengaturan SPMB Pro"
-msgstr ""
 
 #: views/admin/settings.php:56
 msgid "Simpan Pengaturan"
-msgstr ""
 
 #: views/public/announcement.php:17
 msgid "Belum diseleksi"
-msgstr ""
 
 #: views/public/announcement.php:18
 msgid "DITERIMA"
-msgstr ""
 
 #: views/public/announcement.php:19
 msgid "CADANGAN"
-msgstr ""
 
 #: views/public/announcement.php:20
 msgid "TIDAK LOLOS"
-msgstr ""
 
 #: views/public/announcement.php:24
 msgid "Pengumuman Hasil Seleksi"
-msgstr ""
 
 #: views/public/announcement.php:28
 msgid "Pengumuman belum dipublikasikan. Silakan kembali nanti."
-msgstr ""
 
 #: views/public/announcement.php:33
 #: views/public/tracking.php:34
 msgid "Nomor Pendaftaran"
-msgstr ""
 
 #: views/public/announcement.php:36
 msgid "Lihat Hasil"
-msgstr ""
 
 #: views/public/form.php:34
 msgid "Pendaftaran Berhasil"
-msgstr ""
 
 #: views/public/form.php:35
 msgid "Nomor pendaftaran Anda:"
-msgstr ""
 
 #: views/public/form.php:37
 msgid "Simpan nomor ini untuk cek status dan pengumuman."
-msgstr ""
 
 #: views/public/form.php:51
 msgid "Data Calon Siswa"
-msgstr ""
 
 #: views/public/form.php:52
 msgid "Nama Lengkap"
-msgstr ""
 
 #: views/public/form.php:58
 #: views/public/form.php:69
@@ -923,140 +731,105 @@ msgstr ""
 #: views/public/form.php:114
 #: views/public/form.php:143
 msgid "Pilih"
-msgstr ""
 
 #: views/public/form.php:59
 msgid "Laki-laki"
-msgstr ""
 
 #: views/public/form.php:60
 msgid "Perempuan"
-msgstr ""
 
 #: views/public/form.php:76
 msgid "No. HP Siswa"
-msgstr ""
 
 #: views/public/form.php:81
 msgid "Data Orang Tua"
-msgstr ""
 
 #: views/public/form.php:82
 msgid "Nama Orang Tua/Wali"
-msgstr ""
 
 #: views/public/form.php:83
 msgid "No. HP Orang Tua/Wali"
-msgstr ""
 
 #: views/public/form.php:84
 msgid "Pekerjaan Orang Tua/Wali"
-msgstr ""
 
 #: views/public/form.php:85
 msgid "Penghasilan Per Bulan (Rp)"
-msgstr ""
 
 #: views/public/form.php:91
 msgid "NPSN Asal Sekolah"
-msgstr ""
 
 #: views/public/form.php:95
 msgid "Pilihan Jalur & Program"
-msgstr ""
 
 #: views/public/form.php:112
 msgid "Jalur Seleksi"
-msgstr ""
 
 #: views/public/form.php:128
 msgid "Data Zonasi"
-msgstr ""
 
 #: views/public/form.php:129
 msgid "Jarak Rumah ke Sekolah (km)"
-msgstr ""
 
 #: views/public/form.php:133
 msgid "Data Prestasi"
-msgstr ""
 
 #: views/public/form.php:134
 msgid "Rata-rata Nilai Rapor"
-msgstr ""
 
 #: views/public/form.php:139
 msgid "Data Afirmasi"
-msgstr ""
 
 #: views/public/form.php:161
 msgid "Akta Kelahiran"
-msgstr ""
 
 #: views/public/form.php:163
 msgid "Pas Foto"
-msgstr ""
 
 #: views/public/form.php:164
 msgid "Kartu Keluarga (opsional)"
-msgstr ""
 
 #: views/public/form.php:168
 msgid "Sebelumnya"
-msgstr ""
 
 #: views/public/form.php:169
 msgid "Selanjutnya"
-msgstr ""
 
 #: views/public/form.php:170
 msgid "Kirim Pendaftaran"
-msgstr ""
 
 #: views/public/tracking.php:13
 msgid "Draft"
-msgstr ""
 
 #: views/public/tracking.php:14
 msgid "Diterima (menunggu verifikasi)"
-msgstr ""
 
 #: views/public/tracking.php:16
 msgid "Ditolak"
-msgstr ""
 
 #: views/public/tracking.php:20
 msgid "Tidak ada tagihan"
-msgstr ""
 
 #: views/public/tracking.php:21
 msgid "Belum dibayar"
-msgstr ""
 
 #: views/public/tracking.php:22
 msgid "Sudah dibayar (menunggu verifikasi)"
-msgstr ""
 
 #: views/public/tracking.php:23
 msgid "Lunas / Terverifikasi"
-msgstr ""
 
 #: views/public/tracking.php:24
 msgid "Dibatalkan"
-msgstr ""
 
 #: views/public/tracking.php:30
 msgid "Cek Status Pendaftaran"
-msgstr ""
 
 #: views/public/tracking.php:37
 msgid "Cek Status"
-msgstr ""
 
 #: views/public/tracking.php:55
 msgid "Status Pendaftaran"
-msgstr ""
 
 #: views/public/tracking.php:56
 msgid "Status Pembayaran"
-msgstr ""
