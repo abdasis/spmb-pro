@@ -1,0 +1,187 @@
+/* SPMB Pro public styles */
+.spmb-form-wrap {
+	max-width: 720px;
+	margin: 1.5em auto;
+	font-family: inherit;
+}
+
+.spmb-form .spmb-step {
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 18px 20px;
+	margin-bottom: 16px;
+	background: #fff;
+}
+
+.spmb-form legend {
+	font-weight: 600;
+	font-size: 16px;
+	padding: 0 8px;
+	color: #1d2327;
+}
+
+.spmb-field {
+	margin: 0 0 14px;
+	display: flex;
+	flex-direction: column;
+}
+
+.spmb-field label {
+	font-weight: 500;
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+
+.spmb-field input[type="text"],
+.spmb-field input[type="email"],
+.spmb-field input[type="tel"],
+.spmb-field input[type="number"],
+.spmb-field input[type="date"],
+.spmb-field select {
+	padding: 8px 10px;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	font-size: 14px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.spmb-field .required {
+	color: #d63638;
+}
+
+.spmb-error {
+	color: #d63638;
+	font-size: 12px;
+	margin-top: 3px;
+}
+
+.spmb-honeypot {
+	position: absolute;
+	left: -9999px;
+}
+
+.spmb-form-actions {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+	margin-top: 12px;
+}
+
+.spmb-form-actions button {
+	padding: 10px 18px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.spmb-next,
+.spmb-submit {
+	background: #2271b1;
+	color: #fff;
+}
+
+.spmb-prev {
+	background: #f0f0f1;
+	color: #1d2327;
+}
+
+.spmb-form-actions .spmb-submit {
+	display: none;
+}
+
+.spmb-form[data-final-step="1"] .spmb-next { display: none; }
+.spmb-form[data-final-step="1"] .spmb-submit { display: inline-block; }
+
+.spmb-notice {
+	padding: 16px 20px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+}
+
+.spmb-notice-success {
+	background: #edfaef;
+	border: 1px solid #2a9d4a;
+	color: #1a6e34;
+}
+
+.spmb-notice-error {
+	background: #fcf0f1;
+	border: 1px solid #d63638;
+	color: #8a2424;
+}
+
+.spmb-reg-number {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	background: #fff;
+	display: inline-block;
+	padding: 8px 16px;
+	border: 2px dashed #2271b1;
+	border-radius: 6px;
+}
+
+.spmb-status-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 12px;
+}
+
+.spmb-status-table th {
+	text-align: left;
+	width: 45%;
+	padding: 8px 10px;
+	background: #f6f7f7;
+	border: 1px solid #e0e0e0;
+	font-weight: 500;
+}
+
+.spmb-status-table td {
+	padding: 8px 10px;
+	border: 1px solid #e0e0e0;
+}
+
+.spmb-status-result {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 18px 20px;
+	margin-top: 16px;
+}
+
+.spmb-result-badge {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border-radius: 6px;
+	margin: 8px 0;
+}
+
+.spmb-result-diterima {
+	background: #edfaef;
+	color: #1a6e34;
+	border: 2px solid #2a9d4a;
+}
+
+.spmb-result-cadangan {
+	background: #fff8e6;
+	color: #8a6d1a;
+	border: 2px solid #f0b400;
+}
+
+.spmb-result-tidak_lolos {
+	background: #fcf0f1;
+	color: #8a2424;
+	border: 2px solid #d63638;
+}
+
+.spmb-result-pending {
+	background: #f0f0f1;
+	color: #50575e;
+	border: 2px solid #c3c4c7;
+}

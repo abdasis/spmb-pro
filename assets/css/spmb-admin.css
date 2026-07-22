@@ -1,0 +1,62 @@
+/* SPMB Pro admin styles */
+.spmb-wrap { max-width: 1100px; }
+
+.spmb-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin: 20px 0;
+}
+
+.spmb-stat-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 18px 22px;
+	min-width: 180px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.spmb-stat-num {
+	font-size: 28px;
+	font-weight: 700;
+	color: #1d2327;
+}
+
+.spmb-stat-label {
+	color: #646970;
+	font-size: 13px;
+}
+
+.spmb-wrap .nav-tab-wrapper { margin-bottom: 16px; }
+.spmb-wrap .form-table th { width: 240px; }
+
+.spmb-detail-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 16px;
+	margin-top: 12px;
+}
+
+.spmb-detail-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 16px 20px;
+}
+
+.spmb-detail-card h2 { margin-top: 0; }
+
+.spmb-doc-list { list-style: disc; padding-left: 20px; }
+.spmb-doc-list li { margin-bottom: 10px; }
+
+.spmb-filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+	margin-bottom: 12px;
+}
