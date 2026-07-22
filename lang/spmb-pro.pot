@@ -1,0 +1,32 @@
+# Copyright (C) 2026 WP Sekolah
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: SPMB Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/spmb-pro\n"
+"POT-Creation-Date: 2026-07-22T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Hand-written\n"
+"X-Domain: spmb-pro\n"
+
+#. Plugin Name of the plugin
+msgid "SPMB Pro"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wpsekolah.id/plugins/spmb-pro"
+msgstr ""
+
+#. Description of the plugin
+msgid "Sistem Penerimaan Murid Baru untuk sekolah WordPress. Kelola jalur zonasi, afirmasi, prestasi, dan perpindahan dengan kuota, seleksi, dan pengumuman."
+msgstr ""
+
+#. Author of the plugin
+msgid "WP Sekolah"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpsekolah.id"
+msgstr ""

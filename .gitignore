@@ -1,0 +1,25 @@
+# Dependensi / vendor
+/vendor/
+/node_modules/
+
+# Artefak build
+/build/
+/dist/
+*.zip
+
+# Konfigurasi lokal & rahasia
+.env
+.env.*
+wp-config.php
+
+# File sistem / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# File unggahan runtime (jangan commit data pendaftar)
+uploads/
