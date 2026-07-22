@@ -31,6 +31,12 @@ class SPMB_Plugin {
 		add_action( 'init', array( $this, 'load_textdomain' ) );
 		SPMB_Admin_Menu::register();
 		SPMB_Assets::register();
+		SPMB_Form_Shortcode::register();
+		SPMB_Tracking_Shortcode::register();
+		SPMB_Announcement_Shortcode::register();
+		SPMB_Form_Handler::register();
+		SPMB_Export_Handler::register();
+		SPMB_REST_Controller::register();
 	}
 
 	/**

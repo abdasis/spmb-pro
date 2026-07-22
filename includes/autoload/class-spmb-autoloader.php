@@ -32,12 +32,32 @@ class SPMB_Autoloader {
 
 		$path = self::resolve( $class );
 		if ( false !== $path && is_readable( $path ) ) {
+			// Subclass PDF bergantung pada FPDF; muat dulu bila perlu.
+			if ( false !== strpos( $path, '/export/' ) && ! class_exists( 'FPDF' ) ) {
+				self::load_fpdf();
+			}
 			require_once $path;
 		}
 	}
 
 	/**
+	 * Muat library FPDF bila belum ada.
+	 */
+	private static function load_fpdf(): void {
+		if ( ! defined( 'FPDF_FONTPATH' ) ) {
+			define( 'FPDF_FONTPATH', SPMB_PATH . 'includes/libraries/fpdf/font/' );
+		}
+		$fpdf = SPMB_PATH . 'includes/libraries/fpdf/fpdf.php';
+		if ( is_readable( $fpdf ) ) {
+			require_once $fpdf;
+		}
+	}
+
+	/**
 	 * Ubah nama class menjadi path file.
+	 *
+	 * Konvensi: file bernama class-spmb-<kebab-nama-lengkap>.php.
+	 * Pencarian dilakukan di semua subdirektori includes/ lalu di root includes/.
 	 *
 	 * @param string $class Nama class.
 	 * @return string|false Path absolut atau false bila tidak ditemukan.
@@ -47,28 +67,24 @@ class SPMB_Autoloader {
 		$parts    = explode( '_', $relative );
 
 		$kebab = static function ( string $s ): string {
-			return strtolower( preg_replace( '/([a-z0-9])([A-Z])/', '$1-$2', $s ) );
+			$s = str_replace( '_', '-', $s );
+			$s = preg_replace( '/([a-z0-9])([A-Z])/', '$1-$2', $s );
+			return strtolower( $s );
 		};
 
-		if ( count( $parts ) === 1 ) {
-			// Top-level: SPMB_Name -> includes/class-spmb-name.php.
-			$file = 'class-spmb-' . $kebab( $parts[0] ) . '.php';
-			$path = SPMB_PATH . 'includes/' . $file;
-			return file_exists( $path ) ? $path : false;
+		$filename = 'class-spmb-' . $kebab( implode( '-', $parts ) ) . '.php';
+		$base     = SPMB_PATH . 'includes/';
+
+		// Cari di setiap subdirektori (satu tingkat).
+		foreach ( glob( $base . '*', GLOB_ONLYDIR ) as $dir ) {
+			$path = $dir . '/' . $filename;
+			if ( file_exists( $path ) ) {
+				return $path;
+			}
 		}
 
-		// Subdir: SPMB_Subdir_Name -> includes/<kebab-subdir>/class-spmb-<kebab-name>.php.
-		$subdir = $kebab( $parts[0] );
-		$name   = $kebab( implode( '_', array_slice( $parts, 1 ) ) );
-		$path   = SPMB_PATH . 'includes/' . $subdir . '/class-spmb-' . $name . '.php';
-
-		if ( file_exists( $path ) ) {
-			return $path;
-		}
-
-		// Fallback: seluruh segmen sebagai nama top-level.
-		$flat = $kebab( implode( '-', $parts ) );
-		$path = SPMB_PATH . 'includes/class-spmb-' . $flat . '.php';
+		// Fallback: root includes/.
+		$path = $base . $filename;
 		return file_exists( $path ) ? $path : false;
 	}
 }
