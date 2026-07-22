@@ -51,6 +51,16 @@ class SPMB_Admin_Menu {
 			array( SPMB_Admin_Applicants::class, 'render' )
 		);
 
+		// Halaman detail pendaftar (tidak tampil di menu).
+		add_submenu_page(
+			null,
+			__( 'Detail Pendaftar', 'spmb-pro' ),
+			__( 'Detail Pendaftar', 'spmb-pro' ),
+			$cap,
+			'spmb-pro-applicant',
+			array( SPMB_Admin_Applicant_Detail::class, 'render' )
+		);
+
 		add_submenu_page(
 			'spmb-pro',
 			__( 'Verifikasi Pembayaran', 'spmb-pro' ),
