@@ -22,21 +22,40 @@ $tabs = array(
 );
 
 $tab_url_base = admin_url( 'admin.php?page=spmb-pro-settings' );
+$dashboard    = admin_url( 'admin.php?page=spmb-pro' );
+$tab_labels   = array_combine( array_keys( $tabs ), array_values( $tabs ) );
 ?>
 <div class="wrap spmb-wrap">
-	<h1><?php esc_html_e( 'Pengaturan SPMB Pro', 'spmb-pro' ); ?></h1>
+
+	<nav class="spmb-breadcrumb" aria-label="breadcrumb">
+		<a href="<?php echo esc_url( $dashboard ); ?>"><?php esc_html_e( 'Dashboard SPMB', 'spmb-pro' ); ?></a>
+		<span class="spmb-breadcrumb-sep" aria-hidden="true">/</span>
+		<span class="spmb-breadcrumb-current"><?php esc_html_e( 'Pengaturan', 'spmb-pro' ); ?></span>
+	</nav>
+
+	<header class="spmb-page-header">
+		<h1 class="spmb-page-title"><?php esc_html_e( 'Pengaturan SPMB Pro', 'spmb-pro' ); ?></h1>
+		<p class="spmb-page-subtitle"><?php esc_html_e( 'Konfigurasi jenjang, jalur, kuota, biaya, dan dokumen.', 'spmb-pro' ); ?></p>
+	</header>
 
 	<?php if ( $notice ) : ?>
-		<div class="notice notice-success is-dismissible"><p><?php echo esc_html( $notice ); ?></p></div>
+		<div class="spmb-banner spmb-banner--success" role="status">
+			<div class="spmb-banner-body">
+				<span class="spmb-banner-label"><?php esc_html_e( 'Sukses', 'spmb-pro' ); ?></span>
+				<span class="spmb-banner-value"><?php echo esc_html( $notice ); ?></span>
+			</div>
+		</div>
 	<?php endif; ?>
 
-	<h2 class="nav-tab-wrapper">
+	<div class="spmb-segmented" role="tablist" aria-label="<?php esc_attr_e( 'Tab Pengaturan', 'spmb-pro' ); ?>">
 		<?php foreach ( $tabs as $key => $label ) : ?>
-			<a href="<?php echo esc_url( $tab_url_base . '&tab=' . $key ); ?>" class="nav-tab <?php echo $tab === $key ? 'nav-tab-active' : ''; ?>">
-				<?php echo esc_html( $label ); ?>
-			</a>
+			<a href="<?php echo esc_url( $tab_url_base . '&tab=' . $key ); ?>"
+				class="spmb-segmented-item <?php echo $tab === $key ? 'is-active' : ''; ?>"
+				role="tab"
+				aria-selected="<?php echo $tab === $key ? 'true' : 'false'; ?>"
+			><?php echo esc_html( $label ); ?></a>
 		<?php endforeach; ?>
-	</h2>
+	</div>
 
 	<form method="post" action="">
 		<?php wp_nonce_field( 'spmb_save_settings', 'spmb_settings_nonce' ); ?>
@@ -53,7 +72,9 @@ $tab_url_base = admin_url( 'admin.php?page=spmb-pro-settings' );
 			'perpindahan'  => __( 'Perpindahan Tugas', 'spmb-pro' ),
 		);
 		?>
-		<?php submit_button( __( 'Simpan Pengaturan', 'spmb-pro' ) ); ?>
+		<p class="submit">
+			<button type="submit" class="spmb-btn spmb-btn-primary" name="submit" value="1"><?php esc_html_e( 'Simpan Pengaturan', 'spmb-pro' ); ?></button>
+		</p>
 	</form>
 </div>
 <?php
