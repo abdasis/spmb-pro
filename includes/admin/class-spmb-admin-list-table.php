@@ -125,43 +125,83 @@ class SPMB_Admin_List_Table extends WP_List_Table {
 	}
 
 	/**
+	 * Bangun klausa WHERE dari filter GET.
+	 *
+	 * Kolom filter di-whitelist eksplisit agar interpolasi aman secara statis.
+	 *
+	 * @return array{0:string,1:array<int,mixed>} Pair [where, values].
+	 */
+	private function build_where_clause(): array {
+		global $wpdb;
+
+		$where  = '1=1';
+		$values = array();
+
+		// Whitelist kolom filter => key GET.
+		$allowed_filters = array(
+			'jenjang' => 'jenjang',
+			'jalur'   => 'jalur',
+			'status'  => 'status',
+		);
+		foreach ( $allowed_filters as $key => $col ) {
+			if ( ! empty( $_GET[ $key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				$where   .= " AND {$col} = %s";
+				$values[] = sanitize_text_field( wp_unslash( $_GET[ $key ] ) );
+			}
+		}
+
+		if ( ! empty( $_GET['s'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$s       = '%' . $wpdb->esc_like( sanitize_text_field( wp_unslash( $_GET['s'] ) ) ) . '%';
+			$where  .= ' AND (full_name LIKE %s OR registration_number LIKE %s)';
+			$values[] = $s;
+			$values[] = $s;
+		}
+
+		return array( $where, $values );
+	}
+
+	/**
+	 * Ambil ORDER BY aman dari input GET.
+	 *
+	 * @return array{0:string,1:string} Pair [order_by, order].
+	 */
+	private function build_order_clause(): array {
+		$order_by = ! empty( $_GET['orderby'] ) ? sanitize_key( wp_unslash( $_GET['orderby'] ) ) : 'created_at'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$order    = ( isset( $_GET['order'] ) && 'asc' === strtolower( wp_unslash( $_GET['order'] ) ) ) ? 'ASC' : 'DESC'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+		$allowed  = array( 'full_name', 'created_at', 'registration_number' );
+		$order_by = in_array( $order_by, $allowed, true ) ? $order_by : 'created_at';
+
+		return array( $order_by, $order );
+	}
+
+	/**
 	 * Siapkan item tabel.
 	 */
 	public function prepare_items(): void {
 		global $wpdb;
 		$this->_column_headers = array( $this->get_columns(), array(), $this->get_sortable_columns() );
 
-		$where  = '1=1';
-		$values = array();
+		list( $where, $values ) = $this->build_where_clause();
+		list( $order_by, $order ) = $this->build_order_clause();
 
-		$filters = array( 'jenjang', 'jalur', 'status' );
-		foreach ( $filters as $f ) {
-			if ( ! empty( $_GET[ $f ] ) ) { // phpcs:ignore WordPress.Security
-				$where  .= " AND {$f} = %s";
-				$values[] = sanitize_text_field( wp_unslash( $_GET[ $f ] ) ); // phpcs:ignore WordPress.Security
-			}
-		}
-		if ( ! empty( $_GET['s'] ) ) { // phpcs:ignore WordPress.Security
-			$s = '%' . $wpdb->esc_like( sanitize_text_field( wp_unslash( $_GET['s'] ) ) ) . '%';
-			$where  .= ' AND (full_name LIKE %s OR registration_number LIKE %s)';
-			$values[] = $s;
-			$values[] = $s;
-		}
+		$table = SPMB_DB_Applicants::table();
 
-		$order_by = ! empty( $_GET['orderby'] ) ? sanitize_key( wp_unslash( $_GET['orderby'] ) ) : 'created_at'; // phpcs:ignore
-		$order    = ( isset( $_GET['order'] ) && 'asc' === strtolower( wp_unslash( $_GET['order'] ) ) ) ? 'ASC' : 'DESC'; // phpcs:ignore
-		$allowed  = array( 'full_name', 'created_at', 'registration_number' );
-		$order_by = in_array( $order_by, $allowed, true ) ? $order_by : 'created_at';
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedValues -- $where dari whitelist, $order_by/$order di-hardcode.
+		$total = (int) $wpdb->get_var(
+			$wpdb->prepare( "SELECT COUNT(*) FROM %i WHERE {$where}", array_merge( array( $table ), $values ) )
+		);
 
-		$total = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM %i WHERE {$where}", array_merge( array( SPMB_DB_Applicants::table() ), $values ) ) ); // phpcs:ignore WordPress.DB
-		$paged = $this->get_pagenum();
+		$paged  = $this->get_pagenum();
 		$offset = ( $paged - 1 ) * $this->per_page;
 
-		$sql = $wpdb->prepare(
-			"SELECT * FROM %i WHERE {$where} ORDER BY {$order_by} {$order} LIMIT %d OFFSET %d",
-			array_merge( array( SPMB_DB_Applicants::table() ), $values, array( $this->per_page, $offset ) )
-		); // phpcs:ignore WordPress.DB
-		$this->items = $wpdb->get_results( $sql );
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedValues -- $where dari whitelist, $order_by/$order di-hardcode.
+		$this->items = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT * FROM %i WHERE {$where} ORDER BY {$order_by} {$order} LIMIT %d OFFSET %d",
+				array_merge( array( $table ), $values, array( $this->per_page, $offset ) )
+			)
+		);
 
 		$this->set_pagination_args(
 			array(
