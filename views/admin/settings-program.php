@@ -13,11 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<th scope="row"><?php esc_html_e( 'Daftar Program / Jurusan', 'spmb-pro' ); ?></th>
 	<td>
 		<?php if ( empty( $settings['jenjang'] ) ) : ?>
-			<p><?php esc_html_e( 'Belum ada jenjang aktif.', 'spmb-pro' ); ?></p>
+			<p class="spmb-empty"><?php esc_html_e( 'Belum ada jenjang aktif.', 'spmb-pro' ); ?></p>
 		<?php else : ?>
 			<p class="description"><?php esc_html_e( 'Format: kode=nilai. Pisahkan beberapa dengan koma. Contoh: IPA=IPA, IPS=IPS.', 'spmb-pro' ); ?></p>
 			<?php foreach ( $settings['jenjang'] as $j ) : ?>
-				<p>
+				<p class="spmb-note">
 					<label><strong><?php echo esc_html( $j ); ?>:</strong></label><br />
 					<input type="text" class="large-text spmb-program-input" data-jenjang="<?php echo esc_attr( $j ); ?>" />
 				</p>

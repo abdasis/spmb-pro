@@ -18,9 +18,9 @@ $mime_options = array(
 <tr>
 	<th scope="row"><?php esc_html_e( 'Tipe Berkas Diizinkan', 'spmb-pro' ); ?></th>
 	<td>
-		<fieldset>
+		<fieldset class="spmb-fieldset">
 			<?php foreach ( $mime_options as $mime => $label ) : ?>
-				<label style="display:inline-block;margin-right:1em;">
+				<label>
 					<input type="checkbox" name="spmb_settings[allowed_mimes][]" value="<?php echo esc_attr( $mime ); ?>" <?php checked( in_array( $mime, $settings['allowed_mimes'], true ) ); ?> />
 					<?php echo esc_html( $label ); ?>
 				</label>

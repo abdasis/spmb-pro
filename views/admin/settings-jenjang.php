@@ -25,9 +25,9 @@ $jalur_labels   = array(
 <tr>
 	<th scope="row"><?php esc_html_e( 'Jenjang Aktif', 'spmb-pro' ); ?></th>
 	<td>
-		<fieldset>
+		<fieldset class="spmb-fieldset">
 			<?php foreach ( $jenjang_all as $j ) : ?>
-				<label style="display:inline-block;margin-right:1em;">
+				<label>
 					<input type="checkbox" name="spmb_settings[jenjang][]" value="<?php echo esc_attr( $j ); ?>" <?php checked( in_array( $j, $settings['jenjang'], true ) ); ?> />
 					<?php echo esc_html( $jenjang_labels[ $j ] ); ?>
 				</label>
@@ -38,9 +38,9 @@ $jalur_labels   = array(
 <tr>
 	<th scope="row"><?php esc_html_e( 'Jalur Seleksi Aktif', 'spmb-pro' ); ?></th>
 	<td>
-		<fieldset>
+		<fieldset class="spmb-fieldset">
 			<?php foreach ( $jalur_labels as $code => $label ) : ?>
-				<label style="display:inline-block;margin-right:1em;">
+				<label>
 					<input type="checkbox" name="spmb_settings[enabled_jalur][<?php echo esc_attr( $code ); ?>]" value="1" <?php checked( ! empty( $settings['enabled_jalur'][ $code ] ) ); ?> />
 					<?php echo esc_html( $label ); ?>
 				</label>
@@ -58,11 +58,13 @@ $jalur_labels   = array(
 <tr>
 	<th scope="row"><?php esc_html_e( 'Bobot Prestasi', 'spmb-pro' ); ?></th>
 	<td>
-		<label><?php esc_html_e( 'Rapor', 'spmb-pro' ); ?>
-			<input type="number" step="0.01" min="0" max="1" name="spmb_settings[prestasi_weights][rapor]" value="<?php echo esc_attr( $settings['prestasi_weights']['rapor'] ); ?>" class="small-text" />
-		</label>
-		<label style="margin-left:1em;"><?php esc_html_e( 'Prestasi', 'spmb-pro' ); ?>
-			<input type="number" step="0.01" min="0" max="1" name="spmb_settings[prestasi_weights][achievement]" value="<?php echo esc_attr( $settings['prestasi_weights']['achievement'] ); ?>" class="small-text" />
-		</label>
+		<fieldset class="spmb-fieldset">
+			<label><?php esc_html_e( 'Rapor', 'spmb-pro' ); ?>
+				<input type="number" step="0.01" min="0" max="1" name="spmb_settings[prestasi_weights][rapor]" value="<?php echo esc_attr( $settings['prestasi_weights']['rapor'] ); ?>" class="small-text" />
+			</label>
+			<label><?php esc_html_e( 'Prestasi', 'spmb-pro' ); ?>
+				<input type="number" step="0.01" min="0" max="1" name="spmb_settings[prestasi_weights][achievement]" value="<?php echo esc_attr( $settings['prestasi_weights']['achievement'] ); ?>" class="small-text" />
+			</label>
+		</fieldset>
 	</td>
 </tr>

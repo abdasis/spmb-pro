@@ -20,14 +20,14 @@ $jalur_labels = array(
 	<th scope="row"><?php esc_html_e( 'Kuota Per Jalur', 'spmb-pro' ); ?></th>
 	<td>
 		<?php if ( empty( $settings['jenjang'] ) ) : ?>
-			<p><?php esc_html_e( 'Belum ada jenjang aktif. Aktifkan jenjang terlebih dahulu.', 'spmb-pro' ); ?></p>
+			<p class="spmb-empty"><?php esc_html_e( 'Belum ada jenjang aktif. Aktifkan jenjang terlebih dahulu.', 'spmb-pro' ); ?></p>
 		<?php else : ?>
-			<table class="widefat striped" role="presentation">
+			<table class="spmb-table" role="presentation">
 				<thead>
 					<tr>
-						<th><?php esc_html_e( 'Jenjang', 'spmb-pro' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Jenjang', 'spmb-pro' ); ?></th>
 						<?php foreach ( $jalur_labels as $label ) : ?>
-							<th><?php echo esc_html( $label ); ?></th>
+							<th scope="col" class="num"><?php echo esc_html( $label ); ?></th>
 						<?php endforeach; ?>
 					</tr>
 				</thead>
