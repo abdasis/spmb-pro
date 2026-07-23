@@ -1,10 +1,9 @@
 <?php
 /**
  * Plugin Name: SPMB Pro
- * Plugin URI:  https://wpsekolah.id/plugins/spmb-pro
  * Description: Sistem Penerimaan Murid Baru untuk sekolah WordPress. Kelola jalur zonasi, afirmasi, prestasi, dan perpindahan dengan kuota, seleksi, dan pengumuman.
  * Version:     1.0.0
- * Requires at least: 7.0
+ * Requires at least: 6.7
  * Requires PHP: 8.2
  * Author:      WP Sekolah
  * Author URI:  https://wpsekolah.id

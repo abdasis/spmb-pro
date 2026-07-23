@@ -1,14 +1,14 @@
 === SPMB Pro ===
 Contributors: wpsekolah
 Tags: ppdb, spmb, penerimaan murid, sekolah, pendaftaran online
-Requires at least: 7.0
-Tested up to: 7.0
+Requires at least: 6.7
+Tested up to: 6.8
 Requires PHP: 8.2
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Sistem Penerimaan Murid Baru untuk sekolah WordPress: pendaftaran online, seleksi PPDB 3 jalur, pembayaran manual, dan pengumuman.
+Sistem Penerimaan Murid Baru untuk sekolah WordPress: pendaftaran online, seleksi PPDB 4 jalur, pembayaran manual, dan pengumuman.
 
 == Description ==
 
@@ -38,4 +38,17 @@ SPMB Pro mengelola seluruh alur penerimaan murid baru sekolah:
 == Changelog ==
 
 = 1.0.0 =
-* Rilis awal: skeleton, database, dan konfigurasi dasar.
+* Form pendaftaran online multi-langkah dengan upload dokumen.
+* Seleksi PPDB 4 jalur (zonasi, afirmasi, prestasi, perpindahan tugas) dengan kuota dan ranking otomatis.
+* Dashboard admin: KPI pendaftaran, funnel status, breakdown per jalur dan jenjang.
+* Verifikasi pendaftar dan dokumen, bulk aksi verifikasi/tolak.
+* Pembayaran biaya pendaftaran manual dengan verifikasi admin.
+* Pengumuman hasil seleksi dan pelacakan status publik via shortcode.
+* Ekspor kartu pendaftar PDF, laporan CSV, dan laporan seleksi PDF.
+* REST API lookup jarak, data referensi, dan endpoint admin.
+* Integrasi tema block FSE via override CSS progressive enhancement.
+* Konfigurasi jenjang (SD/SMP/SMA), program, kuota, dan dokumen.
+
+== Bundled Libraries ==
+
+* FPDF 1.9 oleh Olivier Plathey — pembuatan PDF. Sumber: http://www.fpdf.org/ (bebas digunakan, kompatibel GPLv2).
