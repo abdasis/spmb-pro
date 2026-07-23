@@ -50,4 +50,36 @@ class SPMB_Defaults {
 			'delete_files_on_uninstall' => false,
 		);
 	}
+
+	/**
+	 * Label terbaca untuk slug jalur.
+	 *
+	 * @param string $slug Slug jalur.
+	 * @return string
+	 */
+	public static function jalur_label( string $slug ): string {
+		$labels = array(
+			'zonasi'      => __( 'Zonasi', 'spmb-pro' ),
+			'afirmasi'    => __( 'Afirmasi', 'spmb-pro' ),
+			'prestasi'    => __( 'Prestasi', 'spmb-pro' ),
+			'perpindahan' => __( 'Perpindahan Tugas', 'spmb-pro' ),
+		);
+		return $labels[ $slug ] ?? ucfirst( $slug );
+	}
+
+	/**
+	 * Label terbaca untuk slug status pendaftar.
+	 *
+	 * @param string $slug Slug status.
+	 * @return string
+	 */
+	public static function status_label( string $slug ): string {
+		$labels = array(
+			'draft'     => __( 'Draft', 'spmb-pro' ),
+			'submitted' => __( 'Submitted', 'spmb-pro' ),
+			'verified'  => __( 'Terverifikasi', 'spmb-pro' ),
+			'rejected'  => __( 'Ditolak', 'spmb-pro' ),
+		);
+		return $labels[ $slug ] ?? ucfirst( $slug );
+	}
 }
