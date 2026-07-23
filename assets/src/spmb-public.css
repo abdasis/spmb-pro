@@ -1,0 +1,323 @@
+/*
+ * SPMB Pro — Public stylesheet entry (Tailwind v4).
+ * Output: assets/css/dist/spmb-public.css
+ *
+ * Pertahankan SEMUA class .spmb-* yang dipakai di views/public/
+ * dan di tema spmb-overrides.css. Jangan rename class.
+ * Jangan ubah display rule .spmb-submit/.spmb-next (JS toggle data-final-step).
+ */
+
+@import "tailwindcss";
+@import "./theme.css";
+
+/* Scan template PHP + JS untuk class literal utility */
+@source "../../views/public";
+@source "../../assets/js/spmb-public.js";
+
+/*
+ * Nonaktifkan Preflight reset — plugin WP, harus coexist dengan tema & CSS WP.
+ * Hanya pakai utility + custom class di bawah.
+ */
+@layer theme, utilities, components;
+
+/* ============================================================
+ * Form wrap
+ * ============================================================ */
+.spmb-form-wrap {
+  max-width: 720px;
+  margin: 1.5rem auto;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+.spmb-form-wrap h2,
+.spmb-form-wrap h3 {
+  text-wrap: balance;
+}
+
+/* ============================================================
+ * Step card
+ * ============================================================ */
+.spmb-form .spmb-step {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.125rem 1.25rem;
+  margin-bottom: 1rem;
+  background: var(--color-surface);
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.04), 0 1px 3px -2px rgba(0, 0, 0, 0.03);
+}
+
+.spmb-form legend {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+ * Field
+ * ============================================================ */
+.spmb-field {
+  margin: 0 0 0.875rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.spmb-field label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--color-ink-secondary);
+}
+
+.spmb-field input[type="text"],
+.spmb-field input[type="email"],
+.spmb-field input[type="tel"],
+.spmb-field input[type="number"],
+.spmb-field input[type="date"],
+.spmb-field input[type="file"],
+.spmb-field select,
+.spmb-field textarea {
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  transition: border-color 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+}
+
+.spmb-field input:focus,
+.spmb-field select:focus,
+.spmb-field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.spmb-field .required {
+  color: var(--color-error);
+}
+
+.spmb-error {
+  color: var(--color-error);
+  font-size: 0.75rem;
+  margin-top: 0.1875rem;
+}
+
+.spmb-honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ============================================================
+ * Form actions — JANGAN ubah display rule .spmb-submit/.spmb-next
+ * JS toggle via data-final-step.
+ * ============================================================ */
+.spmb-form-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.spmb-form-actions button {
+  padding: 0.625rem 1.125rem;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  transition: background-color 150ms var(--ease-out), transform 100ms var(--ease-out);
+}
+
+.spmb-form-actions button:active {
+  transform: scale(0.97);
+}
+
+.spmb-next,
+.spmb-submit {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.spmb-next:hover,
+.spmb-submit:hover {
+  background: var(--color-primary-hover);
+}
+
+.spmb-next:active,
+.spmb-submit:active {
+  background: var(--color-primary-active);
+}
+
+.spmb-prev {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-strong);
+}
+
+.spmb-prev:hover {
+  background: var(--color-surface-dim);
+}
+
+.spmb-prev:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* JS toggle — JANGAN ubah */
+.spmb-form-actions .spmb-submit {
+  display: none;
+}
+
+.spmb-form[data-final-step="1"] .spmb-next {
+  display: none;
+}
+
+.spmb-form[data-final-step="1"] .spmb-submit {
+  display: inline-block;
+}
+
+/* ============================================================
+ * Notice
+ * ============================================================ */
+.spmb-notice {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.spmb-notice-success {
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success-ink);
+}
+
+.spmb-notice-error {
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  color: var(--color-error-ink);
+}
+
+/* ============================================================
+ * Registration number
+ * ============================================================ */
+.spmb-reg-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: var(--color-surface);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+ * Status table — Linear-like: border tipis, header tegas
+ * ============================================================ */
+.spmb-status-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.spmb-status-table th {
+  text-align: left;
+  width: 45%;
+  padding: 0.625rem 0.75rem;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  color: var(--color-ink-secondary);
+  font-size: 0.8125rem;
+}
+
+.spmb-status-table td {
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+}
+
+/* ============================================================
+ * Status result card
+ * ============================================================ */
+.spmb-status-result {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.125rem 1.25rem;
+  margin-top: 1rem;
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.04), 0 1px 3px -2px rgba(0, 0, 0, 0.03);
+}
+
+.spmb-status-result h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+/* ============================================================
+ * Result badge — pill kecil, warna status
+ * ============================================================ */
+.spmb-result-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-pill);
+  margin: 0.5rem 0;
+  border: 1px solid transparent;
+  line-height: 1.4;
+}
+
+.spmb-result-diterima {
+  background: var(--color-success-bg);
+  color: var(--color-success-ink);
+  border-color: var(--color-success-border);
+}
+
+.spmb-result-cadangan {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-ink);
+  border-color: var(--color-warning-border);
+}
+
+.spmb-result-tidak_lolos {
+  background: var(--color-error-bg);
+  color: var(--color-error-ink);
+  border-color: var(--color-error-border);
+}
+
+.spmb-result-pending {
+  background: var(--color-pending-bg);
+  color: var(--color-pending-ink);
+  border-color: var(--color-pending-border);
+}
+
+/* ============================================================
+ * Reduced motion
+ * ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .spmb-form-actions button,
+  .spmb-field input,
+  .spmb-field select,
+  .spmb-field textarea {
+    transition: none;
+  }
+  .spmb-form-actions button:active {
+    transform: none;
+  }
+}

@@ -121,7 +121,7 @@ class SPMB_Form_Shortcode {
 	private static function enqueue_assets(): void {
 		wp_enqueue_style(
 			'spmb-public',
-			SPMB_URL . 'assets/css/spmb-public.css',
+			SPMB_URL . SPMB_Assets::resolve_css( 'spmb-public' ),
 			array(),
 			SPMB_VERSION
 		);

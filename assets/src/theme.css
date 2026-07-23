@@ -1,0 +1,55 @@
+/*
+ * SPMB Pro — Design tokens Linear-like.
+ * Shared @theme antara entry public & admin.
+ * Palet match tema eduka-pro: Primary #1E63E8, Accent #FFB703, neutral slate.
+ */
+
+@theme {
+  /* Brand */
+  --color-primary: #1E63E8;
+  --color-primary-hover: #1A54CC;
+  --color-primary-active: #1648B0;
+  --color-accent: #FFB703;
+  --color-accent-hover: #E5A800;
+
+  /* Neutral ramp (slate) */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-surface-dim: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+  --color-ink: #0f172a;
+  --color-ink-secondary: #475569;
+  --color-ink-muted: #94a3b8;
+
+  /* Semantic */
+  --color-success: #16a34a;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #16a34a;
+  --color-success-ink: #166534;
+  --color-warning: #f0b400;
+  --color-warning-bg: #fffbeb;
+  --color-warning-border: #f0b400;
+  --color-warning-ink: #8a6d1a;
+  --color-error: #dc2626;
+  --color-error-bg: #fef2f2;
+  --color-error-border: #dc2626;
+  --color-error-ink: #991b1b;
+  --color-pending: #64748b;
+  --color-pending-bg: #f1f5f9;
+  --color-pending-border: #cbd5e1;
+  --color-pending-ink: #475569;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}

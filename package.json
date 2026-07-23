@@ -1,0 +1,17 @@
+{
+  "name": "spmb-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SPMB Pro — Tailwind v4 build untuk aset CSS plugin PPDB.",
+  "scripts": {
+    "build": "npm run build:public && npm run build:admin",
+    "build:public": "tailwindcss -i assets/src/spmb-public.css -o assets/css/dist/spmb-public.css",
+    "build:admin": "tailwindcss -i assets/src/spmb-admin.css -o assets/css/dist/spmb-admin.css",
+    "dev": "tailwindcss -i assets/src/spmb-public.css -o assets/css/dist/spmb-public.css --watch",
+    "dev:admin": "tailwindcss -i assets/src/spmb-admin.css -o assets/css/dist/spmb-admin.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

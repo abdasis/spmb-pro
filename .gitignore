@@ -4,13 +4,18 @@
 
 # Artefak build
 /build/
-/dist/
 *.zip
+
+# Jangan abaikan assets/css/dist/ — output Tailwind di-commit
+!assets/css/dist/
 
 # Konfigurasi lokal & rahasia
 .env
 .env.*
 wp-config.php
+
+# Konfigurasi agent lokal (jangan commit)
+.claude/
 
 # File sistem / editor
 .DS_Store

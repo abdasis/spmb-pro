@@ -25,7 +25,7 @@ class SPMB_Announcement_Shortcode {
 		$published = (bool) SPMB_Settings_Repository::get( 'pengumuman_published' );
 		$result    = $published ? self::lookup() : null;
 
-		wp_enqueue_style( 'spmb-public', SPMB_URL . 'assets/css/spmb-public.css', array(), SPMB_VERSION );
+		wp_enqueue_style( 'spmb-public', SPMB_URL . SPMB_Assets::resolve_css( 'spmb-public' ), array(), SPMB_VERSION );
 
 		$data = array(
 			'published' => $published,

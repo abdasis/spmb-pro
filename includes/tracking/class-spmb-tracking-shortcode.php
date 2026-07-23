@@ -24,7 +24,7 @@ class SPMB_Tracking_Shortcode {
 	public static function render(): string {
 		$result = self::lookup();
 
-		wp_enqueue_style( 'spmb-public', SPMB_URL . 'assets/css/spmb-public.css', array(), SPMB_VERSION );
+		wp_enqueue_style( 'spmb-public', SPMB_URL . SPMB_Assets::resolve_css( 'spmb-public' ), array(), SPMB_VERSION );
 
 		ob_start();
 		require SPMB_PATH . 'views/public/tracking.php';

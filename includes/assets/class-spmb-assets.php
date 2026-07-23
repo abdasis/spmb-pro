@@ -30,8 +30,8 @@ class SPMB_Assets {
 
 		wp_enqueue_style(
 			'spmb-admin',
-			SPMB_URL . 'assets/css/spmb-admin.css',
-			array(),
+			SPMB_URL . self::resolve_css( 'spmb-admin' ),
+			array( 'wp-admin' ),
 			SPMB_VERSION
 		);
 		wp_enqueue_script(
@@ -41,5 +41,21 @@ class SPMB_Assets {
 			SPMB_VERSION,
 			true
 		);
+	}
+
+	/**
+	 * Resolve path CSS: prioritas dist (Tailwind build), fallback vanilla.
+	 *
+	 * @param string $handle Handle CSS tanpa prefix.
+	 * @return string Path relatif dari SPMB_URL.
+	 */
+	public static function resolve_css( string $handle ): string {
+		$dist     = 'assets/css/dist/' . $handle . '.css';
+		$fallback = 'assets/css/' . $handle . '.css';
+
+		if ( file_exists( SPMB_PATH . $dist ) ) {
+			return $dist;
+		}
+		return $fallback;
 	}
 }
